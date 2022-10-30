@@ -66,15 +66,17 @@
     <a name="circuit" val="ALU"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="2.0"/>
-    <comp lib="0" loc="(1380,390)" name="Pin">
+    <comp lib="0" loc="(1390,380)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="op"/>
-      <a name="width" val="3"/>
+      <a name="label" val="AO2"/>
     </comp>
-    <comp lib="0" loc="(1380,390)" name="Splitter">
-      <a name="appear" val="right"/>
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
+    <comp lib="0" loc="(1390,400)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="AO1"/>
+    </comp>
+    <comp lib="0" loc="(1390,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="AO0"/>
     </comp>
     <comp lib="0" loc="(1420,1520)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -108,7 +110,7 @@
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1510,380)" name="Constant">
+    <comp lib="0" loc="(1510,360)" name="Constant">
       <a name="facing" val="south"/>
       <a name="value" val="0x0"/>
     </comp>
@@ -339,7 +341,9 @@
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="6" loc="(1420,470)" name="7442"/>
+    <comp lib="6" loc="(1420,470)" name="7442">
+      <a name="label" val="dec"/>
+    </comp>
     <comp lib="6" loc="(1560,1240)" name="7432"/>
     <comp lib="6" loc="(1560,1740)" name="7486"/>
     <comp lib="6" loc="(1560,980)" name="7408"/>
@@ -382,19 +386,19 @@
     <comp lib="6" loc="(3190,1240)" name="74244">
       <a name="label" val="trans4"/>
     </comp>
-    <wire from="(1400,400)" to="(1450,400)"/>
-    <wire from="(1400,410)" to="(1470,410)"/>
-    <wire from="(1400,420)" to="(1490,420)"/>
+    <wire from="(1390,380)" to="(1490,380)"/>
+    <wire from="(1390,400)" to="(1470,400)"/>
+    <wire from="(1390,420)" to="(1450,420)"/>
     <wire from="(1420,1520)" to="(1520,1520)"/>
     <wire from="(1420,1610)" to="(1480,1610)"/>
     <wire from="(1430,500)" to="(1430,710)"/>
     <wire from="(1430,710)" to="(1900,710)"/>
-    <wire from="(1450,400)" to="(1450,440)"/>
+    <wire from="(1450,420)" to="(1450,440)"/>
     <wire from="(1450,500)" to="(1450,520)"/>
     <wire from="(1450,520)" to="(1450,700)"/>
     <wire from="(1450,520)" to="(1600,520)"/>
     <wire from="(1450,700)" to="(1920,700)"/>
-    <wire from="(1470,410)" to="(1470,440)"/>
+    <wire from="(1470,400)" to="(1470,440)"/>
     <wire from="(1470,500)" to="(1470,530)"/>
     <wire from="(1470,530)" to="(1470,690)"/>
     <wire from="(1470,530)" to="(1640,530)"/>
@@ -409,7 +413,7 @@
     <wire from="(1480,940)" to="(1480,1110)"/>
     <wire from="(1480,940)" to="(1490,940)"/>
     <wire from="(1490,1460)" to="(1970,1460)"/>
-    <wire from="(1490,420)" to="(1490,440)"/>
+    <wire from="(1490,380)" to="(1490,440)"/>
     <wire from="(1490,500)" to="(1490,540)"/>
     <wire from="(1490,540)" to="(1490,680)"/>
     <wire from="(1490,540)" to="(1680,540)"/>
@@ -434,7 +438,7 @@
     <wire from="(1510,1840)" to="(1630,1840)"/>
     <wire from="(1510,1850)" to="(1730,1850)"/>
     <wire from="(1510,1860)" to="(1790,1860)"/>
-    <wire from="(1510,380)" to="(1510,440)"/>
+    <wire from="(1510,360)" to="(1510,440)"/>
     <wire from="(1510,500)" to="(1510,750)"/>
     <wire from="(1510,750)" to="(2800,750)"/>
     <wire from="(1510,880)" to="(1810,880)"/>
@@ -1246,5 +1250,11 @@
     <wire from="(830,480)" to="(830,510)"/>
     <wire from="(830,510)" to="(860,510)"/>
     <wire from="(860,440)" to="(860,470)"/>
+  </circuit>
+  <circuit name="Regs">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Regs"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2.0"/>
   </circuit>
 </project>
